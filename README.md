@@ -157,7 +157,8 @@ entirely.
 
 ## Grafana Dashboard
 
-<img width="1547" height="892" alt="image" src="https://github.com/user-attachments/assets/e0101419-9c93-4fd4-9261-ba36fc9e889f" />
+<img width="1547" height="892" alt="Screenshot 2026-07-01 180219" src="https://github.com/user-attachments/assets/49d7dfb1-be82-4494-a62e-e23a56f6a29a" />
+
 
 
 
