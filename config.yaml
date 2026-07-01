@@ -17,5 +17,5 @@ routes:
     rate_limit:
       requests: 5
       window_seconds: 60
-      key_by: api_key
+      key_by: user_id # uses req.user.id set by auth middleware
 

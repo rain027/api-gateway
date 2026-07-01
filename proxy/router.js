@@ -6,13 +6,15 @@ function buildRouter(app, middlewareMap){
     config.routes.forEach(route => {
         const handlers = []
 
+        if (route.protected){
+            handlers.push(middlewareMap.auth)
+        }
+
         if (route.rate_limit){
             handlers.push(middlewareMap.rateLimiter(route));
         }
 
-        if (route.protected){
-            handlers.push(middlewareMap.auth)
-        }
+        
 
         handlers.push(createProxyMiddleware({
             target: route.target,

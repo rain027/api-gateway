@@ -1,4 +1,5 @@
 // token generator for testing
+require('dotenv').config();
 const jwt = require('jsonwebtoken');
 
 const secret = process.env.JWT_SECRET;
@@ -14,4 +15,11 @@ const token = jwt.sign(
   { expiresIn: '1h' }
 );
 
+const token_b = jwt.sign(
+  { id: 'user-456', email: 'testb@example.com' },
+  secret,
+  { expiresIn: '1h' }
+);
+
 console.log('Test JWT:', token);
+console.log('Test_B token:', token_b)
