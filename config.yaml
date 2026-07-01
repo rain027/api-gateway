@@ -4,7 +4,7 @@ server:
 
 routes:
   - path: /users
-    target: http://localhost:4001
+    target: http://mock-services:4001
     protected: false
     rate_limit:
       requests: 10
@@ -12,7 +12,7 @@ routes:
       key_by: ip
 
   - path: /payments
-    target: http://localhost:4002
+    target: http://mock-services:4002
     protected: true
     rate_limit:
       requests: 5
