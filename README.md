@@ -47,7 +47,7 @@ Service A, Service B ( Dummy )
 Make sure Docker Desktop is running, then:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/rain027/api-gateway/
 cd api-gateway
 cp .env.example .env        # add your JWT_SECRET in here
 docker compose up --build
@@ -157,7 +157,8 @@ entirely.
 
 ## Grafana Dashboard
 
-<img width="1446" height="895" alt="image" src="https://github.com/user-attachments/assets/1d87ee83-7995-4818-90c3-f75a56799c42" />
+<img width="1547" height="892" alt="image" src="https://github.com/user-attachments/assets/e0101419-9c93-4fd4-9261-ba36fc9e889f" />
+
 
 
 Shows live request rate, throttle rate percentage, and p99 latency 
@@ -169,9 +170,10 @@ Run using k6:
 ```bash
 k6 run load-test.js
 ```
+<img width="1467" height="786" alt="Screenshot 2026-07-01 173326" src="https://github.com/user-attachments/assets/724a3c50-a0bc-4ba1-8a4e-27d3444b3d10" />
+
 <img width="1503" height="777" alt="Screenshot 2026-07-01 173359" src="https://github.com/user-attachments/assets/4345b3bf-b8fa-4224-ac86-dfdde831b420" />
 
-<img width="1446" height="895" alt="Screenshot 2026-07-01 175205" src="https://github.com/user-attachments/assets/d0954d9e-cf9b-4ee4-8023-152dde2216ff" />
 
 
 ## Security features
