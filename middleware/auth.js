@@ -10,7 +10,12 @@ function auth(req, res, next) {
   }
 
   try {
-    const decoded = jwt.verify(token, config.auth.jwt_secret);
+    const secret = process.env.JWT_SECRET
+    if (!secret) {
+      console.error('JWT_SECRET not set');
+      return res.status(500).json({ error: 'Server misconfiguration' });
+    }
+    const decoded = jwt.verify(token, secret);
     req.user = decoded;
     req.headers['x-user-id'] = decoded.id;
     req.headers['x-user-email'] = decoded.email;

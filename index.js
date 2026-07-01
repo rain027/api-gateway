@@ -1,10 +1,12 @@
 // api getaway application
+require('dotenv').config()
 const express = require('express');
 const config = require('./config')
 const buildRouter = require('./proxy/router')
 const rateLimiter = require('./middleware/rateLimiter')
 const auth = require('./middleware/auth')
 const helmet = require('helmet')
+
 
 const app = express()
 app.use(helmet())
