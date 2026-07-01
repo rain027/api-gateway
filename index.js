@@ -3,6 +3,7 @@ const express = require('express');
 const config = require('./config')
 const buildRouter = require('./proxy/router')
 const rateLimiter = require('./middleware/rateLimiter')
+const auth = require('./middleware/auth')
 
 const app = express()
 app.use(express.json())
@@ -13,7 +14,7 @@ app.get('/_health',(req,res)=>{
 
 const middlewareMap = {
     rateLimiter,
-    auth: (req,res,next) => next(),
+    auth,
 }
 
 buildRouter(app, middlewareMap);

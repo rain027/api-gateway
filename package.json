@@ -15,7 +15,8 @@
     "express": "^5.2.1",
     "http-proxy-middleware": "^3.0.7",
     "ioredis": "^5.11.1",
-    "js-yaml": "^5.2.0"
+    "js-yaml": "^5.2.0",
+    "jsonwebtoken": "^9.0.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
