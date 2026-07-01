@@ -1,6 +1,8 @@
+// api getaway application
 const express = require('express');
 const config = require('./config')
 const buildRouter = require('./proxy/router')
+const rateLimiter = require('./middleware/rateLimiter')
 
 const app = express()
 app.use(express.json())
@@ -10,7 +12,7 @@ app.get('/_health',(req,res)=>{
 })
 
 const middlewareMap = {
-    rateLimiter: (route) => (req,res,next) => next(),
+    rateLimiter,
     auth: (req,res,next) => next(),
 }
 
